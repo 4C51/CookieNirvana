@@ -2,7 +2,7 @@ Game.Win('Third-party');
 if (CookieNirvana === undefined) var CookieNirvana = {};
 if(typeof CCSE == 'undefined') Game.LoadMod('https://klattmose.github.io/CookieClicker/' + (0 ? 'Beta/' : '') + 'CCSE.js');
 CookieNirvana.name = 'Cookie Nirvana';
-CookieNirvana.version = '2.0';
+CookieNirvana.version = '0.9';
 CookieNirvana.GameVersion = '2.022';
 
 CookieNirvana.launch = function() {
