@@ -1,3 +1,4 @@
 theme: jekyll-theme-hacker
-name: CookieNirvana
-title: null
+site:
+  name: CookieNirvana
+  title: null
