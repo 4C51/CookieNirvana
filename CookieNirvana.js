@@ -1,6 +1,6 @@
 Game.Win('Third-party');
-if (CookieNirvana === undefined) var CookieNirvana = {};
-if(typeof CCSE == 'undefined') Game.LoadMod('https://klattmose.github.io/CookieClicker/CCSE.js');
+let CookieNirvana = CookieNirvana || {};
+if (typeof CCSE == 'undefined') Game.LoadMod('https://klattmose.github.io/CookieClicker/CCSE.js');
 CookieNirvana.name = 'Cookie Nirvana';
 CookieNirvana.version = '2.048';
 CookieNirvana.GameVersion = '2.048';
@@ -134,7 +134,7 @@ CookieNirvana.launch = function() {
 		
 		function checkBuffs(buffs) {
 			for (var i = 0; i < buffs.length; i++) {
-				if (Game.hasBuff(buffs[i]) return true;
+				if (Game.hasBuff(buffs[i])) return true;
 			}
 			
 			return false;
@@ -284,9 +284,8 @@ CookieNirvana.launch = function() {
 if(!CookieNirvana.isLoaded){
 	if(CCSE && CCSE.isLoaded){
 		CookieNirvana.launch();
-	}
-	else{
-		if(!CCSE) var CCSE = {};
+	} else {
+		CCSE = CCSE || {};
 		if(!CCSE.postLoadHooks) CCSE.postLoadHooks = [];
 		CCSE.postLoadHooks.push(CookieNirvana.launch);
 	}
