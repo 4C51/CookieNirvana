@@ -282,10 +282,11 @@ CookieNirvana.launch = function() {
 }
 
 if(!CookieNirvana.isLoaded){
-	if(CCSE && CCSE.isLoaded){
+	if(CCSE !== undefined && CCSE.isLoaded){
 		CookieNirvana.launch();
-	} else {
-		if(!CCSE) var CCSE = {};
+	}
+	else{
+		if(CCSE === undefined) var CCSE = {};
 		if(!CCSE.postLoadHooks) CCSE.postLoadHooks = [];
 		CCSE.postLoadHooks.push(CookieNirvana.launch);
 	}
