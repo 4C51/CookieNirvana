@@ -9,7 +9,6 @@ CookieNirvana.launch = function () {
 	CookieNirvana.init = function () {
 		CookieNirvana.isLoaded = true;
 		CookieNirvana.backup = {};
-		CookieNirvana.config = {};
 
 		CookieNirvana.loadConfig();
 		CCSE.customLoad.push(CookieNirvana.loadConfig);
