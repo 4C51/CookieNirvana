@@ -47,6 +47,13 @@ CookieNirvana.launch = function () {
 		CookieNirvana.config = config || {};
 	}
 
+	CookieNirvana.getMenuString = function () {
+		return `<div class="listing">
+			${CCSE.MenuHelper.InputBox('empowerFrenzyInterval', 100, CookieNirvana.config.empower.frenzyInterval, (v) => CookieNirvana.config.empower.frenzyInterval = v)}
+			<label>Empower Frenzy Interval</label>
+		</div>`;
+	}
+
 	CookieNirvana.defaultConfig = function () {
 		return {
 			empower: {
