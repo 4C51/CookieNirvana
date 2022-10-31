@@ -11,7 +11,6 @@ CookieNirvana.launch = function () {
 		CookieNirvana.backup = {};
 		CookieNirvana.config = {};
 
-		CookieNirvana.config = CookieNirvana.defaultConfig();
 		CookieNirvana.loadConfig();
 		CCSE.customLoad.push(CookieNirvana.loadConfig);
 		CCSE.customSave.push(CookieNirvana.saveConfig);
@@ -44,7 +43,7 @@ CookieNirvana.launch = function () {
 
 	CookieNirvana.loadConfig = function () {
 		let config = CCSE.config.OtherMods.CookieNirvana;
-		CookieNirvana.config = config || {};
+		CookieNirvana.config = config || CookieNirvana.defaultConfig();
 	}
 
 	CookieNirvana.getMenuString = function () {
