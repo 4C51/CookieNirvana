@@ -1,5 +1,5 @@
 Game.Win('Third-party');
-if (!CookieNirvana) let CookieNirvana = {};
+if (CookieNirvana === undefined) var CookieNirvana = {};
 if (typeof CCSE == 'undefined') Game.LoadMod('https://klattmose.github.io/CookieClicker/CCSE.js');
 CookieNirvana.name = 'Cookie Nirvana';
 CookieNirvana.version = '2.048';
