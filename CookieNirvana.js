@@ -285,7 +285,7 @@ if(!CookieNirvana.isLoaded){
 	if(CCSE && CCSE.isLoaded){
 		CookieNirvana.launch();
 	} else {
-		CCSE = CCSE || {};
+		if(!CCSE) var CCSE = {};
 		if(!CCSE.postLoadHooks) CCSE.postLoadHooks = [];
 		CCSE.postLoadHooks.push(CookieNirvana.launch);
 	}
